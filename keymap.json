@@ -5,10 +5,20 @@
       // put key-bindings here if you want them to work in normal & visual mode
       "shift-h": "pane::ActivatePrevItem",
       "shift-l": "pane::ActivateNextItem",
+      "ctrl-h": "pane::GoBack",
+      "ctrl-l": "pane::GoForward",
       "shift-k": "editor::Hover",
-      "g a": "editor::ToggleCodeActions",
-      "space e": "project_panel::ToggleFocus",
       "space space": "file_finder::Toggle",
+      "space b": "branches::OpenRecent",
+      "space a": "editor::ToggleCodeActions",
+      "space r": "editor::Rename",
+      "space c d": "editor::GoToDiagnostic",
+      "space c o": "workspace::CloseInactiveTabsAndPanes",
+      "space e": "project_panel::ToggleFocus",
+      "g i": "editor::GoToImplementation",
+      "g s p": "editor::GoToPrevHunk",
+      "g s n": "editor::GoToHunk",
+      "g s r": "editor::RevertSelectedHunks",
       "g w": "vim::MoveToNext",
       "g c": [
         "editor::ToggleComments",
@@ -16,7 +26,9 @@
           "advance_downwards": false
         }
       ],
+      "ctrl-b s": "terminal_panel::ToggleFocus",
       "ctrl-n": "editor::SelectNext",
+      "ctrl-a": "editor::SelectAllMatches",
       "ctrl-s ctrl-n": [
         "editor::SelectNext",
         {
@@ -29,8 +41,7 @@
         {
           "replace_newest": true
         }
-      ],
-      "ctrl-a": "editor::SelectAllMatches"
+      ]
     }
   },
   {
@@ -60,6 +71,12 @@
       "enter": "project_panel::Open",
       "shift-f": "project_panel::NewSearchInDirectory",
       "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-b h": "terminal_panel::ToggleFocus"
     }
   }
 ]
