@@ -1,0 +1,65 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      "shift-k": "editor::Hover",
+      "g a": "editor::ToggleCodeActions",
+      "space e": "project_panel::ToggleFocus",
+      "space space": "file_finder::Toggle",
+      "g w": "vim::MoveToNext",
+      "g c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ],
+      "ctrl-n": "editor::SelectNext",
+      "ctrl-s ctrl-n": [
+        "editor::SelectNext",
+        {
+          "replace_newest": true
+        }
+      ],
+      "ctrl-p": "editor::SelectPrevious",
+      "ctrl-s ctrl-p": [
+        "editor::SelectPrevious",
+        {
+          "replace_newest": true
+        }
+      ],
+      "ctrl-a": "editor::SelectAllMatches"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "h": "project_panel::CollapseSelectedEntry",
+      "l": "project_panel::ExpandSelectedEntry",
+      "shift-r": "project_panel::Rename",
+      "enter": "project_panel::Open",
+      "shift-f": "project_panel::NewSearchInDirectory",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  }
+]
